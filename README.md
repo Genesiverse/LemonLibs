@@ -14,7 +14,7 @@ public class YourPlugin extends JavaPlugin {
   @Override
   public void onEnable() {
 
-    api = new LemonAPI(this);
+    api = getServer().getServicesManager().load(LemonAPI.class);
 
   }
 
