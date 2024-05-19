@@ -23,6 +23,10 @@ public class Actionbar implements SoundAnalyzer {
     public Actionbar(String message) {
         this.message = message;
     }
+    public Actionbar(String message, int duration) {
+        this.message = message;
+        this.duration = duration;
+    }
     public Actionbar setDuration(int duration) {
         this.duration = duration;
         return this;

@@ -59,6 +59,7 @@ public abstract class BaseCommand implements CommandExecutor, TabCompleter {
         }
 
         command.setExecutor(this);
+        command.setTabCompleter(this);
         return true;
     }
 
