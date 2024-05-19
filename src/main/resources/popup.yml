@@ -1,0 +1,65 @@
+confirmation-menus:
+  version:
+    1:
+      numbers: ꡀꡁꡂꡃꡄꡅꡆꡇꡈꡉ
+      rows: 6
+      # These are the clickable confirmation slots
+      confirm: 46,47,48
+      # These are the clickable cancel slots
+      cancel: 50,51,52
+      # This is the middle item for the text
+      text:
+        slots: 40
+      description:
+        slots: 28,29,30,31,32,33,34,37,38,39,41,42,43
+        material: PAPER
+        modeldata: 9999
+        name: '&8&m                    '
+        lore:
+          - '&7Room: &8%id%'
+          - '&7Floor Level: &8%floor%'
+          - ''
+          - '&6Price'
+          - '&7Room: &8%price_settings%'
+          - '&7Fee: &8%initial_price%'
+          - '&7Tax: &8%%tax%'
+          - '&7Total: #00e625%final_price%'
+          - '&8&m                    '
+      # Stationary items are the items that are not clickable
+      # These items are only meant to change the icon's appearance based on whether the player
+      # clicked the confirm button or the cancel button
+      stationary_items:
+        # Stationary item for confirming, unclicked if the confirm slots are not clicked and clicked if the confirm slots are clicked
+        confirm:
+          stages:
+            unclicked:
+              slots: 49
+              material: MAP
+              modeldata: 3075
+              name: null
+              lore:
+                - '%ilore%'
+            clicked:
+              slots: 49
+              material: MAP
+              modeldata: 3077
+              name: ''
+              lore:
+                - '%ilore%'
+        # Stationary item for cancelling
+        cancel:
+          stages:
+            unclicked:
+              slots: 53
+              material: MAP
+              modeldata: 3078
+              name: ' '
+              lore:
+                - '%ilore%'
+            clicked:
+              slots: 53
+              material: MAP
+              modeldata: 3080
+              name: ''
+              lore:
+                - '%ilore%'

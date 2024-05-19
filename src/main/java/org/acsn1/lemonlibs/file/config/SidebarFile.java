@@ -8,7 +8,7 @@ import org.acsn1.lemonlibs.wrapper.FileWrapper;
 public class SidebarFile extends FileWrapper {
 
     public SidebarFile() {
-        super(LemonLibs.getInstance(), "plugins/GenesiCore/LemonLibs/", "Sidebar");
+        super(LemonLibs.getInstance(), "plugins/GenesiCore/LemonLibs/", "sidebar");
 
     }
 

@@ -8,7 +8,7 @@ import org.acsn1.lemonlibs.wrapper.FileWrapper;
 public class PopupFile extends FileWrapper {
 
     public PopupFile() {
-        super(LemonLibs.getInstance(), "plugins/GenesiCore/LemonLibs/", "Popup");
+        super(LemonLibs.getInstance(), "plugins/GenesiCore/LemonLibs/", "popup");
     }
 
 }

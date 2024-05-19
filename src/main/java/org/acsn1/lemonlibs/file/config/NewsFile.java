@@ -8,7 +8,7 @@ import org.acsn1.lemonlibs.wrapper.FileWrapper;
 public class NewsFile extends FileWrapper {
 
     public NewsFile() {
-        super(LemonLibs.getInstance(), "plugins/GenesiCore/LemonLibs/", "iNews");
+        super(LemonLibs.getInstance(), "plugins/GenesiCore/LemonLibs/", "inews");
     }
 
 }
