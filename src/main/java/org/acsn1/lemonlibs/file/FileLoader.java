@@ -1,20 +1,23 @@
 package org.acsn1.lemonlibs.file;
 
 import lombok.Getter;
-import lombok.Setter;
+import org.acsn1.lemonlibs.file.config.NewsFile;
+import org.acsn1.lemonlibs.file.config.PopupFile;
+import org.acsn1.lemonlibs.file.config.SidebarFile;
+import org.acsn1.lemonlibs.file.config.SoundFile;
 
-@Getter @Setter
+@Getter
 public class FileLoader {
 
-    @Getter private final SoundFile soundFile;
-    @Getter private final SidebarFile sidebarFile;
-    @Getter private final PopupFile popupFile;
-    @Getter private final iNewsFile iNewsFile;
+    private final SoundFile soundFile;
+    private final SidebarFile sidebarFile;
+    private final PopupFile popupFile;
+    private final NewsFile newsFile;
 
     public FileLoader() {
         soundFile = new SoundFile();
         sidebarFile = new SidebarFile();
         popupFile = new PopupFile();
-        iNewsFile = new iNewsFile();
+        newsFile = new NewsFile();
     }
 }
