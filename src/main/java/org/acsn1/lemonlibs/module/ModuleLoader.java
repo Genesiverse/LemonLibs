@@ -1,6 +1,7 @@
 package org.acsn1.lemonlibs.module;
 
 import lombok.Getter;
+import org.acsn1.lemonlibs.LemonLibs;
 import org.acsn1.lemonlibs.inews.News;
 import org.acsn1.lemonlibs.menu.MenuManager;
 import org.acsn1.lemonlibs.placeholderapi.PlaceholderProvider;
@@ -17,7 +18,7 @@ public class ModuleLoader {
     private BetterUtils betterUtils;
 
     public ModuleLoader() {
-
+        LemonLibs.getInstance().setModuleLoader(this);
         load();
 
     }

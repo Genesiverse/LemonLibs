@@ -6,11 +6,12 @@ import org.acsn1.lemonlibs.util.item.Icon;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class ToastCommand extends BaseCommand {
 
-    public ToastCommand() {
-        super("toast", "lemonlibs.command.toast");
+    public ToastCommand(JavaPlugin plugin) {
+        super(plugin, "itoast", "lemonlibs.command.itoast");
     }
 
     @Override

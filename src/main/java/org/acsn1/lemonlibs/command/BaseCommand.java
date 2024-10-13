@@ -3,6 +3,7 @@ package org.acsn1.lemonlibs.command;
 import lombok.Getter;
 import org.acsn1.lemonlibs.LemonLibs;
 import org.bukkit.command.*;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -15,19 +16,24 @@ import java.util.function.Consumer;
 @Getter
 public abstract class BaseCommand implements CommandExecutor, TabCompleter {
 
+    private final JavaPlugin plugin;
+
     private final String name;
     private String permission;
     private Consumer<CommandContext> context;
     private BiConsumer<CommandContext, List<String>> suggestions;
 
-    public BaseCommand(String name) {
+    public BaseCommand(JavaPlugin plugin, String name) {
+        this.plugin = plugin;
         this.name = name;
         initialize();
     }
 
-    public BaseCommand(String name, String permission) {
+    public BaseCommand(JavaPlugin plugin, String name, String permission) {
+        this.plugin = plugin;
         this.name = name;
         this.permission = permission;
+        initialize();
     }
 
     public BaseCommand setPermission(String permission) {
@@ -52,9 +58,9 @@ public abstract class BaseCommand implements CommandExecutor, TabCompleter {
 
     public boolean register() {
 
-        PluginCommand command = LemonLibs.getInstance().getCommand(name);
+        PluginCommand command = plugin.getCommand(name);
         if(command==null) {
-            LemonLibs.getInstance().getLogger().warning("Command " + name + " was not registered successfully!");
+            plugin.getLogger().warning("Command " + name + " was not registered successfully!");
             return false;
         }
 

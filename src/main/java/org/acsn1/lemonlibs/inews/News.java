@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import lombok.Getter;
 import lombok.Setter;
 import org.acsn1.lemonlibs.LemonLibs;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 
@@ -30,13 +31,15 @@ public class News {
             ConfigurationSection insideSection = LemonLibs.getInstance().getFileLoader().getNewsFile().getConfig().getConfigurationSection("placeholder_settings." + placeholder);
             if (insideSection == null) return;
 
-            section.getKeys(false).forEach(key -> {
+            insideSection.getKeys(false).forEach(key -> {
                 map.put(key, LemonLibs.getInstance().getFileLoader().getNewsFile().getConfig().getString("placeholder_settings." + placeholder + "." + key));
             });
 
 
             placeholders.put(placeholder, map);
+
         });
+
 
     }
 

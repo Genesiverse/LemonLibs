@@ -13,6 +13,7 @@ import java.io.InputStream;
 @Getter
 public class FileWrapper {
 
+    private final Plugin plugin;
     private final String pluginPath;
     private final String name;
     private File folder;
@@ -20,6 +21,7 @@ public class FileWrapper {
     private FileConfiguration config;
 
     public FileWrapper(Plugin plugin, String pluginPath, String name) {
+        this.plugin = plugin;
         this.pluginPath = pluginPath;
         this.name = name;
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ToastManager {
 
-    private List<ToastNotification> notifications = new ArrayList<>();
+    private final List<ToastNotification> notifications = new ArrayList<>();
 
     public ToastManager() {
         Bukkit.getScheduler().scheduleSyncRepeatingTask(LemonLibs.getInstance(), () -> {

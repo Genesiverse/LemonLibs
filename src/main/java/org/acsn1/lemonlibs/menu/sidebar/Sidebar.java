@@ -18,6 +18,7 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
@@ -28,6 +29,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Getter @Setter
 public class Sidebar extends RestorableInventory implements Listener, SoundAnalyzer {
 
+    private final JavaPlugin plugin;
     private String symbol;
     private String title;
     private int version;
@@ -39,20 +41,28 @@ public class Sidebar extends RestorableInventory implements Listener, SoundAnaly
     private Inventory inventory;
     private Player player;
     private final boolean isRestorable;
+    private int column = 8;
 
-    public Sidebar(String title, int rows, int amount, int version, Player player, boolean isRestorable) {
+    public Sidebar(JavaPlugin plugin, String title, int rows, int amount, int cols, int version, Player player, boolean isRestorable) {
         super(player);
+        this.plugin = plugin;
         this.title = title;
         this.rows = rows;
         this.amount = amount;
+        this.column = cols;
         this.version = version;
         this.pages = amount/(rows*9);
         this.pageItems = new HashMap<>();
         this.current = 1;
         this.player = player;
         this.isRestorable = isRestorable;
-        Bukkit.getPluginManager().registerEvents(this, LemonLibs.getInstance());
+        Bukkit.getPluginManager().registerEvents(this,plugin);
 
+    }
+
+    public Sidebar setColumn(int column) {
+        this.column = column;
+        return this;
     }
 
     public void update(List<ItemStack> items) {
@@ -78,7 +88,7 @@ public class Sidebar extends RestorableInventory implements Listener, SoundAnaly
                     pos = 0;
                 }
 
-                if (pos % 9 == 8) {
+                if (pos % 9 == column) {
                     getPageItems().get(currentPage).put(pos, new ItemStack(Material.AIR));
                     pos++;
                     if (pos < amountPerPage - 1) {
@@ -101,7 +111,7 @@ public class Sidebar extends RestorableInventory implements Listener, SoundAnaly
                     pos = 0;
                 }
 
-                if (pos % 9 == 8) {
+                if (pos % 9 == column) {
 
                     getPageItems().get(currentPage).put(pos, new ItemStack(Material.AIR));
                     pos++;
@@ -139,8 +149,10 @@ public class Sidebar extends RestorableInventory implements Listener, SoundAnaly
         }
 
         inventory = Bukkit.createInventory(null, rows * 9, ChatUtils.color(title));
-        for(Map.Entry<Integer, ItemStack> entry : getPageItems().get(page).entrySet()) {
-            inventory.setItem(entry.getKey(),entry.getValue());
+        if(getPageItems().containsKey(page)) {
+            for (Map.Entry<Integer, ItemStack> entry : getPageItems().get(page).entrySet()) {
+                inventory.setItem(entry.getKey(), entry.getValue());
+            }
         }
 
         if(isRestorable) {
@@ -201,7 +213,7 @@ public class Sidebar extends RestorableInventory implements Listener, SoundAnaly
         if(!(event.getClickedInventory().equals(inventory))) return;
         if(p!=player) p.closeInventory();
 
-        if(event.getSlot() % 9 == 8 || event.getCurrentItem() != null) {
+        if(event.getSlot() % 9 == column || event.getCurrentItem() != null) {
             playSound(p);
         }
         // Previous Page Buttons

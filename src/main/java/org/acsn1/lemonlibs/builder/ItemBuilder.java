@@ -24,6 +24,7 @@ public class ItemBuilder {
     private List<String> lore = new ArrayList<>();
     private boolean hideAttributes;
     private boolean hideEnchants;
+    private boolean hideToolTip;
     private Map<NamespacedKey, String> customData = new HashMap<>();
 
     public ItemBuilder(Material material) {
@@ -107,6 +108,11 @@ public class ItemBuilder {
         return this;
     }
 
+    public ItemBuilder hideToolTip(boolean hideToolTip) {
+        this.hideToolTip = hideToolTip;
+        return this;
+    }
+
     public ItemStack build() {
         ItemMeta meta = itemStack.getItemMeta();
         if(meta!=null) {
@@ -120,6 +126,8 @@ public class ItemBuilder {
 
             if (hideAttributes) meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             if (hideEnchants) meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            if (hideToolTip) meta.setHideTooltip(true);
+
 
             for(Map.Entry<NamespacedKey, String> entry : customData.entrySet()) {
                 meta.getPersistentDataContainer().set(entry.getKey(), PersistentDataType.STRING, entry.getValue());
