@@ -1,0 +1,40 @@
+#  _ _   _
+# (_) \ | |
+#  _|  \| | _____      _____
+# | | . ` |/ _ \ \ /\ / / __|
+# | | |\  |  __/\ V  V /\__ \
+# |_|_| \_|\___| \_/\_/ |___/
+
+prefix: 'iNews'
+
+placeholder_settings:
+  # This is the placeholder call %iNews_<number>%
+  # placeholder inside placeholder should need to be allowed
+  # Example: %iNews_{cmi_random_1_10}%
+  news6rows:
+    # %iNews_1%
+    '0': '꒕岭'
+    '1': '꒕岭'
+    '2': '꒕岭'
+    '3': '꒕岭'
+    '4': '꒕岭'
+    '5': '꒕岭'
+    '6': '꒕岭'
+    '7': '꒕岭'
+    '8': '꒕岭'
+    '9': '꒕岭'
+  news4rows:
+    # %iNews_1%
+    '0': '꒔'
+    '1': '꒔'
+    '2': '꒔'
+    '3': '꒔'
+    '4': '꒔'
+    '5': '꒔'
+    '6': '꒔'
+    '7': '꒔'
+    '8': '꒔'
+    '9': '꒔'
+  hats:
+    # %iNews_hats_1%
+    'test': 'news 1'

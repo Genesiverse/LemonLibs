@@ -1,0 +1,16 @@
+sounds:
+  sidebar:
+    - 'ui.button.click.1'
+    - 'ui.button.click.2'
+    - 'ui.button.click.3'
+    - 'ui.button.click.4'
+  toast:
+    - 'entity_player_levelup'
+  actionbar:
+    - 'entity_player_levelup'
+    - 'entity_villager_celebrate'
+  confirmation-menu:
+    - 'ui.button.click.1'
+    - 'ui.button.click.2'
+    - 'ui.button.click.3'
+    - 'ui.button.click.4'

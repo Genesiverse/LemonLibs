@@ -1,0 +1,244 @@
+##########################################################################
+# ░██████╗██╗██████╗░███████╗██████╗░░█████╗░██████╗░░█████╗░██████╗░██╗ #
+# ██╔════╝██║██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║ #
+# ╚█████╗░██║██║░░██║█████╗░░██████╦╝███████║██████╔╝███████║██████╔╝██║ #
+# ░╚═══██╗██║██║░░██║██╔══╝░░██╔══██╗██╔══██║██╔══██╗██╔══██║██╔═══╝░██║ #
+# ██████╔╝██║██████╔╝███████╗██████╦╝██║░░██║██║░░██║██║░░██║██║░░░░░██║ #
+# ╚═════╝░╚═╝╚═════╝░╚══════╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝ #
+##########################################################################
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃              SideBarLibs Config               ┃
+# ┃  Acts of Violation will initiate legal action ┃
+# ┃                                               ┃
+# ┃  Property of (C) GENESIVERSE.INC              ┃
+# ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# ┣╸ Information: https://bit.ly/genesicraft-licenses
+# ┣╸ Website: https://github.com/Genesiverse
+# ┗╸ CEO: Jan Gigantino, Vanessa Persichitti
+
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃ Here the possible combinations of UI ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+page_combinations_settings:
+
+  4_rows:
+    version-1:
+      page-1:
+        1:
+          symbol: '&f潮'
+      page-2:
+        1:
+          symbol: '&f溶'
+          next: 26,35
+        2:
+          symbol: '&f渤'
+          previous: 8,18,17
+      page-3:
+        1:
+          symbol: '&f滇'
+          next: 17,26,35
+        2:
+          symbol: '&f浡'
+          previous: 8,17
+          next: 26,35
+        3:
+          symbol: '&f溹'
+          previous: 8,17,26
+      page-4:
+        1:
+          symbol: '&f腺'
+          next: 17,26,35
+        2:
+          symbol: '&f脓'
+          previous: 8
+          next: 26,35
+        3:
+          symbol: '&f豺'
+          previous: 8,17
+          next: 35
+        4:
+          symbol: '&f胳'
+          previous: 8,17,26
+      page-5:
+        1:
+          symbol: '&f隳'
+          next: 17,26,35
+        2:
+          symbol: '&f恿'
+          previous: 8
+          next: 26,35
+        3:
+          symbol: '&f鹬'
+          previous: 8,17
+          next: 26,35
+        4:
+          symbol: '&f角'
+          previous: 8,17
+          next: 35
+        5:
+          symbol: '&f解'
+          previous: 8,17,26
+      page-6:
+        1:
+          symbol: '&f奂'
+          next: 17,26,35
+        2:
+          symbol: '&f觭'
+          previous: 8
+          next: 26,35
+        3:
+          symbol: '&f勇'
+          previous: 8,17
+          next: 26,35
+        4:
+          symbol: '&f触'
+          previous: 8,17
+          next: 26,35
+        5:
+          symbol: '&f负'
+          previous: 8,17,26
+          next: 35
+        6:
+          symbol: '&f觞'
+          previous: 8,17,26
+      page-7:
+        1:
+          symbol: '&f觯'
+          next: 17,26,35
+        2:
+          symbol: '&f觖'
+          previous: 8
+          next: 17,26,35
+        3:
+          symbol: '&f觫'
+          previous: 8,17
+          next: 26,35
+        4:
+          symbol: '&f觥'
+          previous: 8,17
+          next: 26,35
+        5:
+          symbol: '&f堕'
+          previous: 8,17
+          next: 35
+        6:
+          symbol: '&f觟'
+          previous: 8,17
+          next: 35
+        7:
+          symbol: '&f觚'
+          previous: 8,17,26
+  6_rows:
+    version-1:
+      page-1:
+        1:
+          symbol: '&f里'
+      page-2:
+        1:
+          symbol: '&f畤'
+          next: 35,44,53
+        2:
+          symbol: '&f黑'
+          previous: 8,17,26
+      page-3:
+        1:
+          symbol: '&f墨'
+          next: 26,35,44,53
+        2:
+          symbol: '&f畦'
+          previous: 8,17
+          next: 44,53
+        3:
+          symbol: '&f野'
+          previous: 8,17,26
+      page-4:
+        1:
+          symbol: '&f龆'
+          next: 26,35,44,53
+        2:
+          symbol: '&f龌'
+          previus: 8,17
+          next: 35,44,53
+        3:
+          symbol: '&f龇'
+          previus: 8,17,26
+          next: 44,53
+        4:
+          previus: 8,17,26,35,44
+          symbol: '&f亡'
+      page-5:
+        1:
+          symbol: '&f肓'
+          next: 26,35,44,53
+        2:
+          symbol: '&f膂'
+          previous: 8
+          next: 35,44,53
+        3:
+          symbol: '&f裔'
+          previous: 8,17
+          next: 44,53
+        4:
+          previous: 8,17,26
+          next: 53
+          symbol: '&f盲'
+        5:
+          previous: 8,17,26,35
+          symbol: '&f壅'
+    version-2:
+      page-1:
+        1:
+          symbol: '&f里'
+      page-2:
+        1:
+          symbol: '&f畤'
+          next: 35,44,53
+        2:
+          symbol: '&f黑'
+          previous: 8,17,26
+      page-3:
+        1:
+          symbol: '&f墨'
+          next: 26,35,44,53
+        2:
+          symbol: '&f畦'
+          previous: 8,17
+          next: 44,53
+        3:
+          symbol: '&f野'
+          previous: 8,17,26
+      page-4:
+        1:
+          symbol: '&f龆'
+          next: 26,35,44,53
+        2:
+          symbol: '&f龌'
+          previous: 8,17
+          next: 35,44,53
+        3:
+          symbol: '&f龇'
+          previous: 8,17,26
+          next: 44,53
+        4:
+          previous: 8,17,26,35,44
+          symbol: '&f亡'
+      page-5:
+        1:
+          symbol: '&f肓'
+          next: 26,35,44,53
+        2:
+          symbol: '&f膂'
+          previous: 8
+          next: 35,44,53
+        3:
+          symbol: '&f裔'
+          previous: 8,17
+          next: 44,53
+        4:
+          previous: 8,17,26
+          next: 53
+          symbol: '&f盲'
+        5:
+          previous: 8,17,26,35
+          symbol: '&f壅'
