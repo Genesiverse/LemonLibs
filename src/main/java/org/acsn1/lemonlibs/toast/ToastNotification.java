@@ -69,7 +69,7 @@ public class ToastNotification implements SoundAnalyzer {
                 "    },\n" +
                 "    \"display\": {\n" +
                 "        \"icon\": {\n" +
-                "            \"item\": \"minecraft:" + icon.getType().name().toLowerCase() + "\",\n" +
+                "            \"id\": \"minecraft:" + icon.getType().name().toLowerCase() + "\",\n" +  // Added "id" key
                 "            \"nbt\": \"{SkullOwner:" + owner + ",CustomModelData:" + modeldata + "}\"\n" +
                 "        },\n" +
                 "        \"title\": {\n" +
