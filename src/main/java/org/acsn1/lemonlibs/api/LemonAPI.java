@@ -34,8 +34,4 @@ public class LemonAPI implements API {
         new ToastNotification(icon, message, toastStyle, player, owner);
     }
 
-    @Override
-    public ModuleLoader getModuleLoader() {
-        return (LemonLibs.getInstance().getModuleLoader() != null ? LemonLibs.getInstance().getModuleLoader() : new ModuleLoader());
-    }
 }

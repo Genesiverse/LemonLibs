@@ -52,6 +52,12 @@ public class SkullBuilder {
         return this;
     }
 
+    public SkullBuilder setPlayer(OfflinePlayer player) {
+        this.player = player;
+        return this;
+    }
+
+
     public ItemStack build() {
         itemStack = new ItemStack(material);
         SkullMeta meta = (SkullMeta) itemStack.getItemMeta();

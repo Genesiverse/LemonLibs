@@ -20,6 +20,5 @@ public interface API {
     Actionbar createActionbar(String message, int duration);
     Sidebar createSidebar(JavaPlugin plugin, String title, int rows, int amount, int cols, int version, Player player, boolean isRestorable);
     void pushToastNotification(ItemStack icon, String message, ToastStyle toastStyle, Player player, String owner);
-    ModuleLoader getModuleLoader();
 
 }

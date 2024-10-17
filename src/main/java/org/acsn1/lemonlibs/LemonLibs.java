@@ -28,6 +28,9 @@ public final class LemonLibs extends JavaPlugin {
         moduleLoader = new ModuleLoader();
         lemonAPI = new LemonAPI();
         new ToastCommand(this); // Register this command only - no need for a command provider for just one command
+        getServer().getServicesManager().register(LemonAPI.class, lemonAPI, this, ServicePriority.Highest);
+
+
 
     }
 
